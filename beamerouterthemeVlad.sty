@@ -1,0 +1,54 @@
+\ProvidesPackage{beamerouterthemeumbctraining}[2013/04/30 v1.0 for beamer 3.26]
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{tikz}
+
+
+%Outer theme created by request on Fiverr.com
+
+\setbeamerfont{title}{size=\Large\bfseries}
+
+
+\mode<presentation>
+
+%the default contents of the footline
+
+
+\setbeamertemplate{footline}%
+{\leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.133333\paperwidth,ht=2.25ex,dp=1ex,right]{title in head/foot}%
+    \usebeamerfont{title in head/foot}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{5ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\setbeamertemplate{headline}
+{
+  \leavevmode%
+\vskip8pt\hbox{%
+\includegraphics[width=\paperwidth]{header.png}
+  }%
+}
+
+\setbeamertemplate{background canvas}{%
+
+}
+
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{title page}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=east]
+  at ([yshift=45pt,xshift=-40pt]current page.east) (title)
+ {\parbox[t]{.6\paperwidth}{\raggedleft\usebeamerfont{title}\textcolor{black}{\inserttitle}}};
+\node[anchor=east]
+  at ([yshift=-12pt,xshift=-1pt]current page.east) (title)
+ {\parbox[t]{.6\paperwidth}{\raggedleft\usebeamerfont{title}\textcolor{blue}{\insertauthor}}};
+\node[anchor=east]
+  at([yshift=-14pt,xshift=-160pt]current page.east) (logo)
+ {\includegraphics[width=12cm]{importsImage.jpg}};
+\end{tikzpicture}
+
+}

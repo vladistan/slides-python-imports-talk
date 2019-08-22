@@ -1,0 +1,39 @@
+\documentclass{beamer}
+\usetheme{Vlad}
+\usepackage{pgfpages}
+\usepackage{listings}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\pgfpagesuselayout{resize to}[a4paper,border shrink=5mm,landscape]
+%%\mode<handout>{\setbeamercolor{background canvas}{bg=black!5}}
+\mode<presentation>
+
+\lstset{%
+    backgroundcolor=\color{yellow!20},%
+    basicstyle=\small\ttfamily,%
+    numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt,%
+    keywordstyle=\color{blue}\bfseries,
+    language=Java,
+    keywordsprefix=B,
+    }%
+
+\title{Python Imports}
+\subtitle{}
+\author{Vlad Korolev \\ vlad@dblfuzzr.com}
+\date[]{ \today}
+
+
+\begin{document}
+
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+
+
+\input{intro}
+
+\end{document}
